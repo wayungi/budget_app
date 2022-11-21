@@ -1,6 +1,7 @@
 class Expense < ApplicationRecord
+  validates :name, :amount, :user, presence: true
+  validates :amount, numericality: { greater_than: 0}
+
   belongs_to :user, foreign_key: 'author_id'
-  # has_many :category_expenses
-  # has_many :categories, through: :category_expenses
   has_and_belongs_to_many :categories
 end
