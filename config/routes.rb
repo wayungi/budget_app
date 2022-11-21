@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'landings/index'
   resources :expenses
   resources :categories
   resources :users
