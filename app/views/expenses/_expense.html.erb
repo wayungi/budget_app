@@ -1,17 +1,8 @@
+
 <div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= expense.author_id %>
-  </p>
-
+  <%# <td><%= link_to "#{expense.name}", category_expense_url(@category, expense) </td> %>
+    <td><%= expense.name %></td>
+    <td><%= expense.amount %></td>
 </div>
+
+

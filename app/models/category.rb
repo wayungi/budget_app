@@ -14,5 +14,7 @@ class Category < ApplicationRecord
     total
   end
 
-  
+  def exp(id) 
+    Category.find(id)
+  end
 end

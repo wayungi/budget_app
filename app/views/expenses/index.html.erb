@@ -1,14 +1,26 @@
-<p style="color: green"><%= notice %></p>
+<div class="wrapper">
+  <%= render 'categories/nav' %>
 
-<h1>Expenses</h1>
-
-<div id="expenses">
-  <% @expenses.each do |expense| %>
-    <%= render expense %>
-    <p>
-      <%= link_to "Show this expense", expense %>
-    </p>
-  <% end %>
+  <p style="color: green"><%= notice %></p>
+  <h1>Expenses</h1>
+  <div id="expenses">
+  <div class="">
+    <%= @category.total_exp %>
+  </div>
+    <table>
+    <tr>
+      <th>Item</th>
+      <th>Amount</th>
+    </tr>
+    <% @expenses.each do |expense| %>
+      <tr>
+      <%= render 'expense', expense: expense, category: @category %>
+      </tr>
+      <p>
+        <%# <%= link_to "Show this expense", expense %>
+      </p>
+    <% end %> 
+    </table>
+  </div>
+  <%# <%= link_to "New expense", new_expense_path %>
 </div>
-
-<%= link_to "New expense", new_expense_path %>
