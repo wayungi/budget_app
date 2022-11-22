@@ -2,7 +2,6 @@
   <% if category.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
-
       <ul>
         <% category.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -10,28 +9,17 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
-    <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_field :icon %>
-  </div>
-<%# 
-  <div>
-    <%= form.label :author_id, style: "display: block"
-    <%= form.text_field :author_id 
-  </div> %>
-
-  <%# <div>
-    <%= form.label :users, style: "display: block"
-    <%= form.text_field :users
-  </div> %>
-
-  <div>
-    <%= form.submit %>
+  <div class="new_cat_panel">
+    <div>
+      <%# <%= form.label :name, style: "display: block" %> 
+      <%= form.text_field :name, placeholder: 'Name', class:'cat_input'%>
+    </div>
+    <div>
+      <%# <%= form.label :icon, style: "display: block" %>
+      <%= form.text_field :icon, placeholder: 'Upload Image', class:'cat_input' %>
+    </div>
+    <div>
+      <%= form.submit class:'form_submit' %>
+    </div>
   </div>
 <% end %>
