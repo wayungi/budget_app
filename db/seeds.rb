@@ -16,11 +16,11 @@ e = User.create(name: 'erina')
 f = User.create(name: 'fwa')
 
 #----------categories--------------
-g = Category.create(name:'goal', icon: 'https://picsum.photos/200', user: a, createdAt:Date.today)
-i = Category.create(name:'illiling', icon: 'https://picsum.photos/200', user: a, createdAt:Date.today)
+g = Category.create(name:'goal', icon: 'https://picsum.photos/200', user: a)
+i = Category.create(name:'illiling', icon: 'https://picsum.photos/200', user: a)
 
-h = Category.create(name:'hiker', icon: 'https://picsum.photos/200', user: a, createdAt:Date.today)
-j = Category.create(name:'jakwor', icon: 'https://picsum.photos/200', user: a, createdAt:Date.today)
+h = Category.create(name:'hiker', icon: 'https://picsum.photos/200', user: a)
+j = Category.create(name:'jakwor', icon: 'https://picsum.photos/200', user: a)
 
 
 #--------------expenses (a) jakwor------------------
@@ -29,9 +29,9 @@ l = Expense.create(name:'tong', amount: 1000, user:a)
 m = Expense.create(name:'pala', amount: 100, user:a)
 
 #--------------expenses (a) hiker------------------
-n = Expense.create(name:'wara', amount: 2000, user:a, createdAt:Date.today)
-o = Expense.create(name:'toll', amount: 500, user:a, createdAt:Date.today)
-p = Expense.create(name:'supeu', amount: 3000, user:a, createdAt:Date.today)
+n = Expense.create(name:'wara', amount: 2000, user:a)
+o = Expense.create(name:'toll', amount: 500, user:a)
+p = Expense.create(name:'supeu', amount: 3000, user:a)
 
 #------------------expenses (b) goal------------ 
 q = Expense.create(name:'ball', amount: 2500, user:b, createdAt:Date.today)

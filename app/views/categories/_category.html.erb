@@ -1,7 +1,7 @@
 <div id="<%= dom_id category %>">
   <p>
     <strong>Name:</strong>
-    <%= category.name %>
+    <%= link_to "#{category.name}", category %>
   </p>
 
   <p>
@@ -14,9 +14,5 @@
     <%= category.author_id %>
   </p>
 
-  <p>
-    <strong>Users:</strong>
-    <%= category.users %>
-  </p>
 
 </div>

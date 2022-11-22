@@ -71,6 +71,9 @@ group :development do
 
   # open generated email confirmations
   gem 'letter_opener', '~> 1.8', '>= 1.8.1'
+
+  # catch n+1 quries
+  gem 'bullet', '~> 7.0', '>= 7.0.3'
 end
 
 group :test do
