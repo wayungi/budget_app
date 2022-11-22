@@ -9,12 +9,8 @@ class Category < ApplicationRecord
     total = 0
     @cats = expenses
     @cats.each do |cat|
-      total = total + cat.amount
+      total += cat.amount
     end
     total
-  end
-
-  def exp(id) 
-    Category.find(id)
   end
 end
