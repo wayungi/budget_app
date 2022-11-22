@@ -12,7 +12,8 @@
 .middle_bar, 
 .top_bar,
 .cat_panel,
-.wrapper  {
+.wrapper,
+.landing{
     display:flex;
 }
 
@@ -21,6 +22,32 @@
     flex-direction: column;
     height:100vh;
     /* outline:1px solid black; */
+}
+
+.landing {
+    flex-direction: column;
+    margin:10px;
+    align-items: center;
+}
+
+.landing_title {
+    margin-top:150px;
+    margin-bottom: 50px;
+    font-size: 2em;
+    color:#434b54;
+}
+
+.access {
+    width:100%;
+    height:70px;
+    line-height:70px;
+    text-align: center;
+    margin-bottom:20px;
+    border-radius:5px;
+    text-decoration:none;
+    font-weight: 700;
+    font-size: 2em;
+    color:white;
 }
 
 .navigation {
@@ -122,4 +149,8 @@
 
 .blue {
     background-color: #3778c2;
+}
+
+.green {
+    background-color: #5fb523;
 }

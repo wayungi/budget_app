@@ -1,10 +1,9 @@
-<h1>Editing category</h1>
-
-<%= render "form", category: @category %>
-
-<br>
-
-<div>
-  <%= link_to "Show this category", @category %> |
-  <%= link_to "Back to categories", categories_path %>
+<div class="wrapper">
+  <%= render 'nav' %>
+  <h1>Editing category</h1>
+  <%= render "form", category: @category %><br>
+  <div class="controls">
+    <%= link_to "Show this category", @category, class:'options blue' %> <br />
+    <%= link_to "Back to categories", categories_path, class:'options blue' %>
+  </div>
 </div>

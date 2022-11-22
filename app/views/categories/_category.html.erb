@@ -5,12 +5,10 @@
     <p>
       <%= image_tag "#{category.icon}", class:'image_size' %>
     </p>
-
     <p>
       <%= link_to "#{category.name}", category, class:'cat_name' %><br />
       <%= category.created_at.strftime("%Y-%m-%d") %>
     </p>
-
     <p>
       <strong>$ <%= category.total_exp %></strong>
     </p>
