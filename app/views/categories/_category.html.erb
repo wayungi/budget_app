@@ -1,18 +1,18 @@
+
+
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= link_to "#{category.name}", category %>
-  </p>
+  <div class="cat_panel">
+    <p>
+      <%= image_tag "#{category.icon}", class:'image_size' %>
+    </p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
+    <p>
+      <%= link_to "#{category.name}", category, class:'cat_name' %><br />
+      <%= category.created_at.strftime("%Y-%m-%d") %>
+    </p>
 
-  <p>
-    <strong>Author:</strong>
-    <%= category.author_id %>
-  </p>
-
-
+    <p>
+      <strong>$ <%= category.total_exp %></strong>
+    </p>
+  </div>
 </div>

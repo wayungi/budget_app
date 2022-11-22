@@ -8,7 +8,6 @@
 
 #---------------users---------------
 a = User.create(name: 'amara')
-
 b = User.create(name: 'bero')
 c = User.create(name: 'chan')
 d = User.create(name: 'dei')

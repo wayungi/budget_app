@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <%= render 'nav' %>
+  <%= render 'nav', @title %>
   <p style="color: green"><%= notice %></p>
 
   <h1>Categories</h1>
@@ -9,6 +9,6 @@
       <%= render category %>
     <% end %>
   </div>
-
-  <%= link_to "New category", new_category_path %>
+  
+  <%= link_to "New category", new_category_path, class:'new_category'%>
 </div>

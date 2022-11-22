@@ -8,22 +8,26 @@
     font-family: 'Alexandria', sans-serif;
 }
 
+.middle_bar, 
+.top_bar,
+.cat_panel,
+.wrapper  {
+    display:flex;
+}
+
 .wrapper {
     min-width: 300px;
+    flex-direction: column;
+    height:100vh;
+    outline:1px solid black;
 }
 
 .navigation {
     height: 100px;
-    outline: 1px solid black;
     background: blue;
     color:white;
     font-weight: 700;
     padding:5px 10px;
-
-}
-
-.middle_bar, .top_bar {
-    display:flex;
 }
 
 .top_bar {
@@ -33,4 +37,36 @@
 
 .middle_bar {
     justify-content: space-between;
+}
+
+/* category styles */
+.cat_panel {
+    margin: 10px 10px;
+    padding:10px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 1px 1px rgba(150,150,150, 0.5);
+}
+
+.cat_name {
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.image_size {
+    height:100px;
+}
+
+.new_category {
+    margin: 10px;
+    height:70px;
+    text-align: center;
+    line-height:70px;
+    text-decoration: none;
+    border-radius:5px;
+    font-size: 2em;
+    background-color: blue;
+    color:white;
 }
