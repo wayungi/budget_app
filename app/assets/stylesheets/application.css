@@ -107,8 +107,8 @@
     color:white;
 }
 
-.new_cat_panel {
-    /* outline:1px solid black; */
+.new_cat_panel,
+.new_exp_panel {
     padding:10px;
 }
 

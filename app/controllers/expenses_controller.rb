@@ -21,11 +21,15 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
+    puts params[:category_id]
+    puts '_______________'
     @expense = Expense.new(expense_params)
+    @expense.user = current_user
+    @expense.categories << @category
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
+        format.html { redirect_to category_expenses_path(@category), notice: 'Expense was successfully created.' }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
