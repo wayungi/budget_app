@@ -67,6 +67,14 @@
     justify-content: space-between;
 }
 
+.logout {
+  all:unset;
+  border: 1px solid #434b54;
+  padding:5px;
+  border-radius: 5px;
+  cursor:pointer;
+}
+
 /* category styles */
 .cat_panel {
     margin: 10px 10px;
