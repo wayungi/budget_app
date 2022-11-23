@@ -21,8 +21,6 @@ class ExpensesController < ApplicationController
 
   # POST /expenses or /expenses.json
   def create
-    puts params[:category_id]
-    puts '_______________'
     @expense = Expense.new(expense_params)
     @expense.user = current_user
     @expense.categories << @category
