@@ -22,4 +22,5 @@ RSpec.describe Expense, type: :model do
         expense.user = nil
         expect(expense).to_not be_valid
     end
+
 end
