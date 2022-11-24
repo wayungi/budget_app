@@ -3,23 +3,18 @@ class ExpensesController < ApplicationController
   before_action :set_expense, only: %i[show edit update destroy]
   before_action :set_category
 
-  # GET /expenses or /expenses.json
   def index
     @expenses = @category.expenses.order(created_at: :desc)
   end
 
-  # GET /expenses/1 or /expenses/1.json
   def show; end
 
-  # GET /expenses/new
   def new
     @expense = Expense.new
   end
 
-  # GET /expenses/1/edit
   def edit; end
 
-  # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params)
     @expense.user = current_user
@@ -36,7 +31,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /expenses/1 or /expenses/1.json
   def update
     respond_to do |format|
       if @expense.update(expense_params)
@@ -49,7 +43,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # DELETE /expenses/1 or /expenses/1.json
   def destroy
     @expense.destroy
 
@@ -70,7 +63,6 @@ class ExpensesController < ApplicationController
     @category = Category.find(params[:category_id])
   end
 
-  # Only allow a list of trusted parameters through.
   def expense_params
     params.require(:expense).permit(:name, :amount, :author_id)
   end

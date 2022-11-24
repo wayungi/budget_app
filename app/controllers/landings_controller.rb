@@ -4,4 +4,3 @@ class LandingsController < ApplicationController
   end
 end
 
-# redirect_to groups_path if user_signed_in?
