@@ -23,6 +23,7 @@
   flex-direction: column;
   height: 100vh;
   outline:4px solid black;
+  position:relative;
 }
 
 .landing {
@@ -65,8 +66,8 @@
   font-size:2.5em;
   padding: 0 8px;
   cursor: pointer;
-  ou
 }
+
 .top_bar {
   justify-content: space-between;
   margin-bottom: 20px;
@@ -104,26 +105,26 @@
   height: 100px;
 }
 
-/* .new_category,
-.back_to_category {
-  margin: 10px;
-  height: 70px;
-  text-align: center;
-  line-height: 70px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 2em;
-  background-color: blue;
-  color: white;
-} */
-
+.exp-btn-wrap,
 .btn-wrapper {
-  display:flex;
+  display: flex;
+  background-color:  #5fb523;
   align-items:center;
   justify-content: center;
-  background-color:  #5fb523;
+}
+
+.btn-wrapper {
   height:150px;
 }
+
+.exp-btn-wrap {
+  height:70px;
+  position:absolute;
+  bottom:0;
+  width:100vw;
+}
+
+
 
 .btns {
   border:1px solid #fff;
@@ -214,6 +215,8 @@
   box-shadow: 0 0 4px 1px #434b54;
   padding: 10px 0;
 }
+
+
 
 /* devise pages */
 

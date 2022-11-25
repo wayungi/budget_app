@@ -22,13 +22,8 @@
     <% end %> 
     </table>
   </div>
-  <div class="controls">
-    <div class="">
-      <%= button_to "Add new expense", new_category_expense_path(@category), method: :get, class:''%>
-    </div>
-    
-    <div class="">
-    <%= link_to "Home page", categories_path, class:'' %>
-    </div>
+
+  <div  class="exp-btn-wrap">
+    <%= button_to "Add new expense", new_category_expense_path(@category), method: :get, class:'btns'%>
   </div>
 </div>
