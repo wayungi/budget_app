@@ -5,7 +5,7 @@
     </div>
 
     <div class="middle_bar">
-        <div><i class="fa-solid fa-bars fa-2x"></i></div>
+        <%= link_to "<", categories_path, class:'less_than'%>
         <div><%= button_to 'Sign out', destroy_user_session_path, :method => :delete, class: 'logout'%></div>
     </div>
 </div>

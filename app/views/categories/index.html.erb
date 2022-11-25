@@ -1,5 +1,16 @@
 <div class="wrapper">
-  <%= render 'nav', @title %>
+  <div class="navigation">
+    <div class="top_bar">
+        <div><i class="fa-solid fa-ellipsis fa-2x"></i></div>
+        <div><i class="fa-solid fa-battery-full  fa-2x"></i></div>
+    </div>
+
+    <div class="middle_bar">
+        <div><i class="fa-solid fa-bars fa-2x"></i></div>
+        <div><%= button_to 'Sign out', destroy_user_session_path, :method => :delete, class: 'logout'%></div>
+    </div>
+</div>
+
   <p style="color: green"><%= notice %></p>
 
   <h1 class="exp_title">Categories</h1>

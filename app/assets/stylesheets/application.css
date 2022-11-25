@@ -22,6 +22,7 @@
   min-width: 300px;
   flex-direction: column;
   height: 100vh;
+  outline:4px solid black;
 }
 
 .landing {
@@ -58,6 +59,14 @@
   padding: 5px 10px;
 }
 
+.less_than {
+  all:unset;
+  color:white;
+  font-size:2.5em;
+  padding: 0 8px;
+  cursor: pointer;
+  ou
+}
 .top_bar {
   justify-content: space-between;
   margin-bottom: 20px;
@@ -95,7 +104,7 @@
   height: 100px;
 }
 
-.new_category,
+/* .new_category,
 .back_to_category {
   margin: 10px;
   height: 70px;
@@ -106,7 +115,7 @@
   font-size: 2em;
   background-color: blue;
   color: white;
-}
+} */
 
 .btn-wrapper {
   display:flex;
@@ -160,7 +169,7 @@
   margin: 10px;
 }
 
-.options,
+/* .options,
 .new_expense,
 .back_to_categories {
   all: unset;
@@ -172,9 +181,9 @@
   border-radius: 5px;
   color: #fff;
   font-weight: 700;
-}
+} */
 
-.red {
+/* .red {
   background-color: red;
 }
 
@@ -184,7 +193,7 @@
 
 .green {
   background-color: #5fb523;
-}
+} */
 
 .exp_title {
   text-align: center;
