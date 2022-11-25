@@ -108,6 +108,12 @@
   color: white;
 }
 
+#categories {
+  /* outline:5px solid black; */
+  height:calc(100vh-100px);
+  overflow-y: scroll;
+}
+
 .new_cat_panel,
 .new_exp_panel {
   padding: 10px;
