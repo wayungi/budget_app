@@ -13,7 +13,8 @@
 .top_bar,
 .cat_panel,
 .wrapper,
-.landing {
+.landing,
+.devise_page {
   display: flex;
 }
 
@@ -182,3 +183,54 @@
   box-shadow: 0 0 4px 1px #434b54;
   padding: 10px 0;
 }
+
+
+/* devise pages */
+
+.devise_page {
+  flex-direction: column;
+  width:80%;
+  margin:25vh auto;
+  align-items: center;
+  border-radius:5px;
+  box-shadow: 0 0 1px 1px #434b54;
+  padding:30px 0;
+}
+
+
+h2.login_title{
+  margin:20px 0;
+}
+.form-field {
+  all: unset;
+  border:1px solid #434b54;
+  height:40px;
+  width:100%;
+  margin:5px auto;
+  font-size: 1.5em;
+  padding:2px 5px;
+  border-radius:4px;
+}
+
+.btn_login {
+  width:100%;
+  margin:5px auto;
+  text-align:center;
+  height:40px;
+  line-height:40px;
+  font-size:1.2em;
+  font-weight: 300;
+  color:#fff;
+  background-color: #5fb523;
+  cursor: pointer;
+}
+
+.btn_login:hover {
+  background-color: #7ca75d;
+}
+
+.btn_login:active {
+  background-color: #122405;
+}
+
+
