@@ -108,8 +108,24 @@
   color: white;
 }
 
+.btn-wrapper {
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  background-color:  #5fb523;
+  height:150px;
+}
+
+.btns {
+  border:1px solid #fff;
+  padding:15px 200px;
+  background-color: #5fb523;
+  border-radius:5px;
+  color:#fff;
+  font-weight:700;
+}
+
 #categories {
-  /* outline:5px solid black; */
   height:calc(100vh-100px);
   overflow-y: scroll;
 }
