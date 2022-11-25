@@ -11,5 +11,5 @@ class ActiveSupport::TestCase
 
   # Add more helper methods to be used by all tests here...
 
-incude Devise::Test::IntergrationHelpers
+  incude Devise::Test::IntergrationHelpers
 end
