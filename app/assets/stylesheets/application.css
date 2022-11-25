@@ -52,6 +52,14 @@
   color: white;
 }
 
+.blue {
+  background: blue;
+}
+
+.green {
+  background: green;
+}
+
 .navigation {
   height: 100px;
   background: #3778c2;
