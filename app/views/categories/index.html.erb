@@ -1,14 +1,27 @@
-<p style="color: green"><%= notice %></p>
+<div class="wrapper">
+  <div class="navigation">
+    <div class="top_bar">
+        <div><i class="fa-solid fa-ellipsis fa-2x"></i></div>
+        <div><i class="fa-solid fa-battery-full  fa-2x"></i></div>
+    </div>
 
-<h1>Categories</h1>
-
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
+    <div class="middle_bar">
+        <div><i class="fa-solid fa-bars fa-2x"></i></div>
+        <div><%= button_to 'Sign out', destroy_user_session_path, :method => :delete, class: 'logout'%></div>
+    </div>
 </div>
 
-<%= link_to "New category", new_category_path %>
+  <p style="color: green"><%= notice %></p>
+
+  <h1 class="exp_title">Categories</h1>
+
+  <div id="categories">
+    <% @categories.each do |category| %>
+      <%= render category %>
+    <% end %>
+  </div>
+  
+    <div class="btn-wrapper">
+      <%= button_to "New category", new_category_path, method: :get, class:'btns'%>
+    </div>
+</div>

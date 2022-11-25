@@ -1,22 +1,16 @@
+
+
 <div id="<%= dom_id category %>">
-  <p>
-    <strong>Name:</strong>
-    <%= category.name %>
-  </p>
-
-  <p>
-    <strong>Icon:</strong>
-    <%= category.icon %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= category.author_id %>
-  </p>
-
-  <p>
-    <strong>Users:</strong>
-    <%= category.users %>
-  </p>
-
+  <div class="cat_panel">
+    <p>
+      <%= image_tag "#{category.icon}", class:'image_size' %>
+    </p>
+    <p>
+      <%= link_to "#{category.name}", category_expenses_path(category), class:'cat_name' %><br />
+      <%= category.created_at.strftime("%Y-%m-%d") %>
+    </p>
+    <p>
+      <strong>UGX: <%= category.expenses.sum(:amount) %></strong>
+    </p>
+  </div>
 </div>

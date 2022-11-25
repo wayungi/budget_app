@@ -1,29 +1,28 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_expense, only: %i[show edit update destroy]
+  before_action :set_category
 
-  # GET /expenses or /expenses.json
   def index
-    @expenses = Expense.all
+    @expenses = @category.expenses.order(created_at: :desc)
   end
 
-  # GET /expenses/1 or /expenses/1.json
   def show; end
 
-  # GET /expenses/new
   def new
     @expense = Expense.new
   end
 
-  # GET /expenses/1/edit
   def edit; end
 
-  # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params)
+    @expense.user = current_user
+    @expense.categories << @category
 
     respond_to do |format|
       if @expense.save
-        format.html { redirect_to expense_url(@expense), notice: 'Expense was successfully created.' }
+        format.html { redirect_to category_expenses_path(@category), notice: 'Expense was successfully created.' }
         format.json { render :show, status: :created, location: @expense }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -32,7 +31,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /expenses/1 or /expenses/1.json
   def update
     respond_to do |format|
       if @expense.update(expense_params)
@@ -45,7 +43,6 @@ class ExpensesController < ApplicationController
     end
   end
 
-  # DELETE /expenses/1 or /expenses/1.json
   def destroy
     @expense.destroy
 
@@ -62,7 +59,10 @@ class ExpensesController < ApplicationController
     @expense = Expense.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
+  def set_category
+    @category = Category.find(params[:category_id])
+  end
+
   def expense_params
     params.require(:expense).permit(:name, :amount, :author_id)
   end

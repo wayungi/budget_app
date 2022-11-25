@@ -1,17 +1,8 @@
+
 <div id="<%= dom_id expense %>">
-  <p>
-    <strong>Name:</strong>
-    <%= expense.name %>
-  </p>
-
-  <p>
-    <strong>Amount:</strong>
-    <%= expense.amount %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= expense.author_id %>
-  </p>
-
+    <td><%= expense.name %></td>
+    <td>UGX: <%= expense.amount %></td>
+    <td><%= expense.created_at.strftime('%m/%d/%Y') %></td>
 </div>
+
+
