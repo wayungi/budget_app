@@ -7,7 +7,6 @@ RSpec.feature 'Categories', type: :feature do
     login_as(user)
   end
 
-
   it 'creates a category' do
     visit '/categories'
     expect(page).to have_content 'Categories'
