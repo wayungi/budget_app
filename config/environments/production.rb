@@ -38,7 +38,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   #! set action mailer in production
-  config.action_mailer.default_url_options = { host: 'budget-app-ei4z.onrender.com'}
+  config.action_mailer.default_url_options = { host: 'budget-app-ei4z.onrender.com', protocol: 'https'}
 
   #! Enable email sending through gmail
   config.action_mailer.delivery_method = :smtp
