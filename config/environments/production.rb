@@ -40,6 +40,20 @@ Rails.application.configure do
   #! set action mailer in production
   config.action_mailer.default_url_options = { host: 'budget-app-ei4z.onrender.com'}
 
+  #! Enable email sending through gmail
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'render.com',
+    user_name:            'fwayungi@gmail.com',
+    password:             'fmurwpptymbabnzm',
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5 
+  }
+
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
