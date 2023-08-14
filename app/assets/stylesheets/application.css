@@ -77,12 +77,21 @@
   width: 45%;
   margin-left: 50px;
   border-radius: 10px;
-  /* border: 1px solid red; */
-  overflow: hidden;
+  overflow: hidden; /* force the image inside the div to obey div border radius*/
 }
 
 .landing-content img {
   width:100%;
+}
+
+.landing-description {
+  margin-left: 50px;
+}
+
+.landing_title {
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
 }
 
 .navigation {
