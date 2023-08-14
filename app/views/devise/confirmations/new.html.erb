@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <div class="devise_page devise_page flex-display column sign-up-page bg-pane">
+  <div class="devise_page flex-display column sign-up-page bg-pane">
 
     <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
 
@@ -14,8 +14,12 @@
       <div class="btn">
         <%= f.submit "Resend confirmation instructions",  class:'sign-up-btn' %>
       </div>
+
+      <div class="shared-links">
+        <%= render "devise/shared/links" %>
+      </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+   
   </div>
 </div>
