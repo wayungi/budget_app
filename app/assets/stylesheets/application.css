@@ -18,6 +18,8 @@
   display: flex;
 }
 
+
+
 .wrapper {
   min-width: 100%;
   flex-direction: column;
@@ -31,23 +33,39 @@
 }
 
 /* landing page styles */
-.landing {
-  margin: 0 auto;
-  width: 80%;
-  height: 90vh;
-  margin-top:5vh; /*Center landing div vertically*/
-  border-radius: 5px;
-  background-color: rgba(128, 0, 128, 0.8);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 
+.landing {
+  padding-top:10px;
+  min-width: 100%;
+  height: 100%;
+  background-color: rgba(128, 0, 128, 0.8);
+  margin: 0;
 }
+
+/* hide the budget picture on mobile */
+.landing-image {
+  display: none
+}
+
+h1.landing_title, .landing-description p {
+  text-align:center;
+}
+
+.sign-in {
+  width: 100%;
+  text-align:center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+/*=====================================*/
 
 .landing > div {
   display:flex;
 }
 
 .landing-nav {
-  margin-top:10px;
   justify-content: space-between;
   align-items: center;
   height:50px;
@@ -116,6 +134,35 @@
   margin-top: 40px;
   text-decoration: none;
 }
+
+@media screen and (min-width: 780px) {
+
+  .landing {
+    margin: 0 auto;
+    width: 80%;
+    height: 90vh;
+    margin-top:5vh; /*Center landing div vertically*/
+    border-radius: 5px;
+    background-color: rgba(128, 0, 128, 0.8);
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  .landing-nav {
+    margin-top:10px;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    box-sizing: border-box;
+  }
+
+  .landing-image {
+    display: block;
+  }
+
+}
+
+
+/* ============================================== */
 
 .navigation {
   height: 100px;
