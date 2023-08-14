@@ -62,6 +62,7 @@ h1.landing_title, .landing-description p {
   box-sizing: border-box;
 }
 
+/* contains the lo for the page */
 .landing-nav div{ 
   padding-top:4px; /* Add white space above the logo to balance it woth the bottom space*/
   width: 47px;
@@ -88,7 +89,6 @@ h1.landing_title, .landing-description p {
   justify-content: center;
   align-items: center;
   width:100%;
-  margin-top: 40px;
 }
 
 .landing_title {
@@ -109,7 +109,7 @@ h1.landing_title, .landing-description p {
   color: white;
   padding: 20px 40px;
   border-radius: 5px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
   text-decoration: none;
   width: 80%;
   position: absolute;
@@ -131,6 +131,8 @@ h1.landing_title, .landing-description p {
     height: 80%;
     width:80%;
     border-radius: 5px;
+    min-height: 300px;
+
   }
 
   /* .landing-nav {
@@ -159,13 +161,18 @@ h1.landing_title, .landing-description p {
     width: 45%;
     margin-left: 50px;
     border-radius: 10px;
-    overflow: hidden; /* force the image inside the div to obey div border radius*/
+    overflow: hidden; /* force the image inside the div to obey div border radius
   } */
 
   /* .landing-content img {
     width:100%;
   } */
-  
+
+  .sign-in {
+    width: 200px;
+    position: relative;
+    margin-top: 50px;
+  }
 
 }
 
