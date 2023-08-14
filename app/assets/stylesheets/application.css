@@ -31,15 +31,18 @@
   margin: 0 auto;
   width: 80%;
   height: 90vh;
-  margin-top:5vh;
+  margin-top:5vh; /*Center landing div vertically*/
   border-radius: 5px;
   background-color: purple;
 
 }
 
+.landing > div {
+  display:flex;
+}
+
 .landing-nav {
   margin-top:10px;
-  display:flex;
   justify-content: space-between;
   align-items: center;
   height:50px;
@@ -56,6 +59,29 @@
 }
 
 .logo-div img {
+  width:100%;
+}
+
+.sign-up {
+  color:white;
+  margin-right: 100px;
+  text-decoration: none;
+  font-weight:bold;
+}
+
+.landing-content {
+  margin-top: 50px;
+}
+
+.landing-image {
+  width: 45%;
+  margin-left: 50px;
+  border-radius: 10px;
+  /* border: 1px solid red; */
+  overflow: hidden;
+}
+
+.landing-content img {
   width:100%;
 }
 
