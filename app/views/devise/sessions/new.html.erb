@@ -1,15 +1,14 @@
 <div class="wrapper">
-  <div class="devise_page">
-    <h2 class="login_title">Log in</h2>
-
+  <div class="devise_page flex-display column sign-up-page bg-pane">
     <%= form_for(resource, as: resource_name, class:'login_form', url: session_path(resource_name)) do |f| %>
+
+      <h1 class="sign-in-title">Log in</h1>
+
       <div class="field">
-        <%# <%= f.label :email<br /> %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:'Email', class:'form-field'%>
       </div>
 
       <div class="field">
-        <%# <%= f.label :password<br /> %>
         <%= f.password_field :password, autocomplete: "current-password", placeholder:'Password', class:'form-field' %>
       </div>
 
@@ -20,11 +19,14 @@
         </div>
       <% end %>
 
-      <div class="actions">
-        <%= f.submit "Log in", class:'btn_login' %>
+      <div class="btn login-tweaks">
+        <%= f.submit "Log in", class:'login-btn' %>
       </div>
-    <% end %>
-      <%= render "devise/shared/links" %>
 
+      <div class="shared-links">
+        <%= render "devise/shared/links" %>
+      </div>
+
+    <% end %>
   </div>
 </div>
