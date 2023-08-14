@@ -147,10 +147,15 @@
 
   .landing-image {
     margin: 0 5%;
+    height: 320px;
+    width:1200px;
+    border-radius: 5px;
+    overflow: hidden;
   }
 
   .landing-image img {
     width:100%;
+    object-fit:cover;    
   }
   
 
