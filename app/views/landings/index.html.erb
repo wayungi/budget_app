@@ -1,7 +1,19 @@
 <div class="wrapper">
     <div class="landing">
-        <h1 class="landing_title">Smart budget</h1>
-        <%= link_to 'Sign in', new_user_session_path, class:'access blue'%>
-        <%= link_to 'Sign up', new_user_registration_path, class:'access green'%>
+        <div class="landing-nav">
+            <div class=""><%= image_tag("money-bag.png", alt: "budget app logo") %></div>
+            <%= link_to 'Sign up', new_user_registration_path, class:'access green'%>
+        </div>
+
+        <div>
+            <div>
+                <p> budge image</div>
+            </div>
+            <div>
+                <h1 class="landing_title">Smart budget</h1>
+                <p>text desctoptio</p>
+                <%= link_to 'Sign in', new_user_session_path, class:'access blue'%>
+            </div>
+        </div>
     </div>
 </div>

@@ -13,51 +13,34 @@
 .top_bar,
 .cat_panel,
 .wrapper,
-.landing,
 .devise_page,
 .form_submit {
   display: flex;
 }
 
 .wrapper {
-  min-width: 300px;
+  min-width: 100%;
   flex-direction: column;
   height: 100vh;
   position: relative;
+
 }
 
+/* landing page styles */
 .landing {
-  flex-direction: column;
-  margin: 10px;
-  align-items: center;
-}
-
-.landing_title {
-  margin-top: 150px;
-  margin-bottom: 50px;
-  font-size: 2em;
-  color: #434b54;
-}
-
-.access {
-  width: 100%;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  margin-bottom: 20px;
+  outline:1px solid red;
+  margin: 0 auto;
+  width: 80%;
+  height: 90vh;
+  margin-top:5vh;
   border-radius: 5px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 2em;
-  color: white;
 }
 
-.blue {
-  background: blue;
-}
-
-.green {
-  background: green;
+.landing-nav {
+  display:flex;
+  justify-content: space-between;
+  padding: 20px;
+  outline:1px solid black;
 }
 
 .navigation {
