@@ -28,19 +28,35 @@
 
 /* landing page styles */
 .landing {
-  outline:1px solid red;
   margin: 0 auto;
   width: 80%;
   height: 90vh;
   margin-top:5vh;
   border-radius: 5px;
+  background-color: purple;
+
 }
 
 .landing-nav {
+  margin-top:10px;
   display:flex;
   justify-content: space-between;
-  padding: 20px;
-  outline:1px solid black;
+  align-items: center;
+  height:50px;
+  box-sizing: border-box;
+}
+
+.landing-nav div{ 
+  padding-top:4px; /* Add white space above the logo to balance it woth the bottom space*/
+  width: 47px;
+  box-sizing: border-box;
+  margin-left:50px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.logo-div img {
+  width:100%;
 }
 
 .navigation {
