@@ -1,7 +1,19 @@
-<div class="wrapper">
-    <div class="landing">
-        <h1 class="landing_title">Smart budget</h1>
-        <%= link_to 'Sign in', new_user_session_path, class:'access blue'%>
-        <%= link_to 'Sign up', new_user_registration_path, class:'access green'%>
+<div class="wrapper .column">
+    <div class="bg-pane">
+        <div class="landing">
+            <div class="landing-nav flex-display">
+                <div class="logo-div"><%= image_tag("money-bag.png", alt: "budget app logo") %></div>
+                <%= link_to 'Sign up', new_user_registration_path, class:'sign-up'%>
+            </div>
+
+            <div class="landing-content flex-display">
+                <div class="landing-image"><%= image_tag("budget.jpg", alt: "budgeting tools") %></div>
+                <div class="landing-description">
+                    <h1 class="landing_title">Smart budget</h1>
+                    <p>Take Control of your Finances</p>
+                    <%= link_to 'Sign in', new_user_session_path, class:'sign-in'%>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

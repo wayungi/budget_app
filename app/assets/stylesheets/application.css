@@ -9,56 +9,227 @@
   border: none;
 }
 
-.middle_bar,
-.top_bar,
-.cat_panel,
-.wrapper,
-.landing,
-.devise_page,
-.form_submit {
+.flex-display {
   display: flex;
 }
 
-.wrapper {
-  min-width: 300px;
+.column {
   flex-direction: column;
-  height: 100vh;
-  position: relative;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;  /* full page height determinant */
+}
+
+.bg-pane {
+  height: 100%;
+  width: 100%;
+  background: center no-repeat url(bg-landing.jpg);
+  background-size: cover;
 }
 
 .landing {
-  flex-direction: column;
-  margin: 10px;
+  padding-top: 10px;
+  height: 100%;
+  background-color: rgba(128, 0, 128, 0.8);
+}
+
+/* hide the budget picture on mobile */
+.landing-image {
+  display: none;
+}
+
+.landing-nav {
+  justify-content: space-between;
   align-items: center;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+/* contains the lo for the page */
+.landing-nav div {
+  padding-top: 4px; /* Add white space above the logo to balance it woth the bottom space */
+  width: 47px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.logo-div img {
+  width: 100%;
+}
+
+.sign-up {
+  color: white;
+  margin-right: 100px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.landing-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .landing_title {
-  margin-top: 150px;
-  margin-bottom: 50px;
-  font-size: 2em;
-  color: #434b54;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
 }
 
-.access {
-  width: 100%;
-  height: 70px;
-  line-height: 70px;
+.landing-description p {
+  color: white;
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.sign-in {
   text-align: center;
-  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  display: inline-block;
+  background-color: #5fb523;
+  color: white;
+  padding: 20px 40px;
   border-radius: 5px;
   text-decoration: none;
-  font-weight: 700;
-  font-size: 2em;
-  color: white;
+  width: 80%;
+  position: absolute;
+  bottom: 20px;
 }
 
-.blue {
-  background: blue;
+.sign-up-page {
+  align-items: center;
 }
 
-.green {
-  background: green;
+/* new_user class is the sign up form */
+.new_user {
+  width: 100%;
+  height: 100vh;
+  padding: 30px 20px;
+  border: 1px solid #eee;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
 }
+
+.new_user .form-field {
+  all: unset;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid grey;
+  font-size: 20px;
+}
+
+.sign-up-btn,
+.login-btn {
+  display: inline-block;
+  width: 250px;
+  padding: 20px 0;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: #5fb523;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn {
+  text-align: center;
+}
+
+.sign-up-title,
+.sign-in-title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shared-links {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.btn_login:hover {
+  background-color: #7ca75d;
+}
+
+.btn_login:active {
+  background-color: #122405;
+}
+
+.login-tweaks {
+  margin-top: 20px;
+}
+
+/* ===================================== */
+
+@media screen and (min-width: 780px) {
+  .bg-pane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .landing {
+    margin: 2px 5px;
+    height: 80%;
+    width: 80%;
+    border-radius: 5px;
+    min-height: 440px; /* prevents child elements from sliding out of thier parent */
+  }
+
+  .sign-in {
+    width: 200px;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .new_user {
+    width: 375px;
+    border-radius: 5px;
+    height: auto;
+  }
+}
+
+/* ============ add the landing page image when page is wide enough ==== */
+@media screen and (min-width: 1000px) {
+  .landing-content {
+    margin-top: 50px;
+  }
+
+  .landing-image {
+    margin: 0 5%;
+    height: 320px;
+    width: 1200px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: block;
+  }
+
+  .landing-image img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  div.landing-description {
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 320px; /* prevents child elements from sliding out of thier parent */
+    padding-right: 20px;
+  }
+}
+
+/* ============================================== */
 
 .navigation {
   height: 100px;
@@ -182,50 +353,8 @@
 
 /* devise pages */
 
-.devise_page {
-  flex-direction: column;
-  width: 80%;
-  margin: 25vh auto;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow: 0 0 1px 1px #434b54;
-  padding: 30px 0;
-}
-
 h2.login_title {
   margin: 20px 0;
-}
-
-.form-field {
-  all: unset;
-  border: 1px solid #434b54;
-  height: 40px;
-  width: 100%;
-  margin: 5px auto;
-  font-size: 1.5em;
-  padding: 2px 5px;
-  border-radius: 4px;
-}
-
-.btn_login {
-  width: 100%;
-  margin: 5px auto;
-  text-align: center;
-  height: 40px;
-  line-height: 40px;
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #fff;
-  background-color: #5fb523;
-  cursor: pointer;
-}
-
-.btn_login:hover {
-  background-color: #7ca75d;
-}
-
-.btn_login:active {
-  background-color: #122405;
 }
 
 .exp_form {
