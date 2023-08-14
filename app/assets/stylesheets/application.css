@@ -94,6 +94,12 @@
   margin-top: 30px;
 }
 
+.landing-description p {
+  color: white;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
 .navigation {
   height: 100px;
   background: #3778c2;
