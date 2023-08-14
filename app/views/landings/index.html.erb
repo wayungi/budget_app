@@ -1,16 +1,18 @@
 <div class="wrapper">
-    <div class="landing">
-        <div class="landing-nav">
-            <div class="logo-div"><%= image_tag("money-bag.png", alt: "budget app logo") %></div>
-            <%= link_to 'Sign up', new_user_registration_path, class:'sign-up'%>
-        </div>
+    <div class="bg-pane">
+        <div class="landing">
+            <div class="landing-nav">
+                <div class="logo-div"><%= image_tag("money-bag.png", alt: "budget app logo") %></div>
+                <%= link_to 'Sign up', new_user_registration_path, class:'sign-up'%>
+            </div>
 
-        <div class="landing-content">
-            <div class="landing-image"><%= image_tag("budget.jpg", alt: "budgeting tools") %></div>
-            <div class="landing-description">
-                <h1 class="landing_title">Smart budget</h1>
-                <p>Take Control of your Finances</p>
-                <%= link_to 'Sign in', new_user_session_path, class:'sign-in'%>
+            <div class="landing-content">
+                <div class="landing-image"><%= image_tag("budget.jpg", alt: "budgeting tools") %></div>
+                <div class="landing-description">
+                    <h1 class="landing_title">Smart budget</h1>
+                    <p>Take Control of your Finances</p>
+                    <%= link_to 'Sign in', new_user_session_path, class:'sign-in'%>
+                </div>
             </div>
         </div>
     </div>

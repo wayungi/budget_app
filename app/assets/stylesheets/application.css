@@ -23,7 +23,11 @@
   flex-direction: column;
   height: 100vh;
   position: relative;
+}
 
+.bg-pane {
+  height:100vh;
+  background-image: url(bg-landing.jpg);
 }
 
 /* landing page styles */
@@ -33,7 +37,7 @@
   height: 90vh;
   margin-top:5vh; /*Center landing div vertically*/
   border-radius: 5px;
-  background-color: purple;
+  background-color: rgba(128, 0, 128, 0.8);
 
 }
 
