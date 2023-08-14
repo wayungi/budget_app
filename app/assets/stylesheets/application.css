@@ -9,37 +9,34 @@
   border: none;
 }
 
-.middle_bar,
-.top_bar,
-.cat_panel,
-.wrapper,
-.devise_page,
-.form_submit {
+.flex-display  {
   display: flex;
 }
 
+.column {
+  flex-direction: column;
+}
 
+.row {
+  flex-direction: row;
+}
 
 .wrapper {
-  min-width: 100%;
-  flex-direction: column;
-  height: 100vh;
-  position: relative;
+  width: 100vw;
+  height: 100vh;  /*full page height determinant*/
 }
 
 .bg-pane {
-  height:100vh;
-  background-image: url(bg-landing.jpg);
+  height:100%;
+  width:100%;
+  background: center no-repeat url(bg-landing.jpg);
+  background-size: cover;
 }
-
-/* landing page styles */
 
 .landing {
   padding-top:10px;
-  min-width: 100%;
   height: 100%;
   background-color: rgba(128, 0, 128, 0.8);
-  margin: 0;
 }
 
 /* hide the budget picture on mobile */
@@ -56,13 +53,6 @@ h1.landing_title, .landing-description p {
   text-align:center;
   font-weight: bold;
   font-size: 20px;
-}
-
-
-/*=====================================*/
-
-.landing > div {
-  display:flex;
 }
 
 .landing-nav {
@@ -92,25 +82,13 @@ h1.landing_title, .landing-description p {
   font-weight:bold;
 }
 
-.landing-content {
-  margin-top: 50px;
-  margin-right: 50px;
-}
-
-.landing-image {
-  width: 45%;
-  margin-left: 50px;
-  border-radius: 10px;
-  overflow: hidden; /* force the image inside the div to obey div border radius*/
-}
-
-.landing-content img {
-  width:100%;
-}
-
 .landing-description {
-  margin-left: 50px;
-
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  margin-top: 40px;
 }
 
 .landing_title {
@@ -133,31 +111,61 @@ h1.landing_title, .landing-description p {
   border-radius: 5px;
   margin-top: 40px;
   text-decoration: none;
+  width: 80%;
+  position: absolute;
+  bottom: 20px;
 }
+
+/*=====================================*/
 
 @media screen and (min-width: 780px) {
 
-  .landing {
-    margin: 0 auto;
-    width: 80%;
-    height: 90vh;
-    margin-top:5vh; /*Center landing div vertically*/
-    border-radius: 5px;
-    background-color: rgba(128, 0, 128, 0.8);
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  .bg-pane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .landing-nav {
+  .landing {
+    margin-top:5px;
+    height: 80%;
+    width:80%;
+    border-radius: 5px;
+  }
+
+  /* .landing-nav {
     margin-top:10px;
     justify-content: space-between;
     align-items: center;
     height:50px;
     box-sizing: border-box;
-  }
+  } */
 
-  .landing-image {
+  /* .landing-content {
+    margin-top: 50px;
+    margin-right: 50px;
+  } */
+
+  /* .landing-description {
+    margin-left: 50px;
+  
+  } */
+
+  /* .landing-image {
     display: block;
-  }
+  } */
+
+  /* .landing-image {
+    width: 45%;
+    margin-left: 50px;
+    border-radius: 10px;
+    overflow: hidden; /* force the image inside the div to obey div border radius*/
+  } */
+
+  /* .landing-content img {
+    width:100%;
+  } */
+  
 
 }
 
