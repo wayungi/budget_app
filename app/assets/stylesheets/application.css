@@ -44,10 +44,6 @@
   display: none
 }
 
-h1.landing_title, .landing-description p {
-  text-align:center;
-}
-
 .sign-in {
   width: 100%;
   text-align:center;
@@ -100,7 +96,7 @@ h1.landing_title, .landing-description p {
 .landing-description p {
   color: white;
   font-size: 40px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .sign-in {
@@ -109,7 +105,6 @@ h1.landing_title, .landing-description p {
   color: white;
   padding: 20px 40px;
   border-radius: 5px;
-  /* margin-top: 40px; */
   text-decoration: none;
   width: 80%;
   position: absolute;
@@ -127,46 +122,13 @@ h1.landing_title, .landing-description p {
   }
 
   .landing {
-    margin-top:5px;
+    margin:2px 5px;
     height: 80%;
     width:80%;
     border-radius: 5px;
-    min-height: 300px;
+    min-height: 440px; /*prevents child elements from sliding out of thier parent*/
 
   }
-
-  /* .landing-nav {
-    margin-top:10px;
-    justify-content: space-between;
-    align-items: center;
-    height:50px;
-    box-sizing: border-box;
-  } */
-
-  /* .landing-content {
-    margin-top: 50px;
-    margin-right: 50px;
-  } */
-
-  /* .landing-description {
-    margin-left: 50px;
-  
-  } */
-
-  /* .landing-image {
-    display: block;
-  } */
-
-  /* .landing-image {
-    width: 45%;
-    margin-left: 50px;
-    border-radius: 10px;
-    overflow: hidden; /* force the image inside the div to obey div border radius
-  } */
-
-  /* .landing-content img {
-    width:100%;
-  } */
 
   .sign-in {
     width: 200px;
@@ -176,6 +138,35 @@ h1.landing_title, .landing-description p {
 
 }
 
+/* ============ add the landing page image when page is wide enough ==== */
+@media screen and (min-width:1000px) {
+
+  .landing-content {
+    margin-top: 50px;
+  }
+
+  .landing-image {
+    margin: 0 5%;
+  }
+
+  .landing-image img {
+    width:100%;
+  }
+  
+
+  .landing-image {
+    display: block;
+  }
+
+  div.landing-description {
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 320px; /*prevents child elements from sliding out of thier parent*/
+    padding-right:20px;
+  }
+
+
+}
 
 /* ============================================== */
 
