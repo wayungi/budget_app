@@ -71,6 +71,7 @@
 
 .landing-content {
   margin-top: 50px;
+  margin-right: 50px;
 }
 
 .landing-image {
@@ -86,6 +87,7 @@
 
 .landing-description {
   margin-left: 50px;
+
 }
 
 .landing_title {
@@ -98,6 +100,16 @@
   color: white;
   font-size: 40px;
   margin-top: 20px;
+}
+
+.sign-in {
+  display: inline-block;
+  background-color: #5fb523;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-top: 40px;
+  text-decoration: none;
 }
 
 .navigation {
